@@ -1,0 +1,1 @@
+SELECT eid,sal FROM pd WHERE dep='Eng' ORDER BY sal DESC LIMIT 1 OFFSET 1;

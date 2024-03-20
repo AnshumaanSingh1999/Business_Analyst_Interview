@@ -1,0 +1,1 @@
+SELECT name FROM empl_max_dep_sal where sal IN(SELECT max(sal) FROM empl_max_dep_sal GROUP BY dep);

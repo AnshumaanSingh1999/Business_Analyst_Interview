@@ -1,0 +1,1 @@
+SELECT car FROM vehicles GROUP by car ORDER BY COUNT(car) DESC LIMIT 1;
