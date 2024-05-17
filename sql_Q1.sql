@@ -1,1 +1,1 @@
-SELECT name FROM empl_max_dep_sal where sal IN(SELECT max(sal) FROM empl_max_dep_sal GROUP BY dep);
+SELECT name FROM (SELECT *,(Rank() over (PARTITION BY dep ORDER BY sal DESC)) AS Ranking FROM empl_max_dep_sal) AS Artificial_Table WHERE Ranking=1;
